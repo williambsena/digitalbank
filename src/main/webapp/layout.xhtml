@@ -20,14 +20,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Magister</a>
+                    <a class="navbar-brand" href="/digitalbank/index.xhtml">Magister</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Início</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
+                    <h:form id="linksFrm">
+                        <ul class="nav navbar-nav">
+                            <li><h:commandLink action="/index.xhtml?faces-redirect=true">Início</h:commandLink></li>
+                            <li><h:commandLink action="/public/about.xhtml">Sobre</h:commandLink></li>
+                            <li><h:commandLink action="/public/contact.xhtml">Contato</h:commandLink></li>
+                        </ul>
+                    </h:form>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
