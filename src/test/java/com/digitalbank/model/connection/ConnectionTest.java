@@ -10,15 +10,19 @@ import org.junit.Test;
  */
 public class ConnectionTest {
 
-    private DBConn conexao;
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     public ConnectionTest() {
+        entityManager = DBConn.newInstance().getEntityManager();
     }
 
     @Test
-    public void hasValidConnection() {
+    public void isEntityManagerNotNull() {
         Assert.assertNotNull(entityManager);
+    }
+
+    @Test
+    public void isEntityManagerOpen() {
         Assert.assertTrue(entityManager.isOpen());
     }
 }
