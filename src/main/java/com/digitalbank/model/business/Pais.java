@@ -1,6 +1,6 @@
 package com.digitalbank.model.business;
 
-import java.util.List;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +26,7 @@ public class Pais extends AbstractEntity {
     private Integer ddi;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "pais")
-    private List<Estado> estados;
+    private Set<Estado> estados;
 
     public Pais() {
     }
@@ -55,11 +55,11 @@ public class Pais extends AbstractEntity {
         this.ddi = ddi;
     }
 
-    public List<Estado> getEstados() {
+    public Set<Estado> getEstados() {
         return estados;
     }
 
-    public void setEstados(List<Estado> estados) {
+    public void setEstados(Set<Estado> estados) {
         this.estados = estados;
     }
 

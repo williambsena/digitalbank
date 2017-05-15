@@ -7,6 +7,7 @@
     <class>com.digitalbank.model.business.Pessoa</class>
     <class>com.digitalbank.model.business.Pais</class>
     <class>com.digitalbank.model.business.Estado</class>
+    <class>com.digitalbank.model.business.Cidade</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/digitalbank"/>
